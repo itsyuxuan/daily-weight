@@ -185,5 +185,26 @@ form input[type="submit"]:hover {
   color: hotpink;
   border-left-color: hotpink;
 }
+.canvas-box{
+  width: 100%;
+  max-width: 720px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px aqua;
+  margin-bottom: 2rem;
+}
+.weight-history ul {
+  list-style:none;
+  padding: 0;
+  margin: 0;
+}
+.weight-history ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
 </style>
 
