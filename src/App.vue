@@ -98,5 +98,42 @@ watch(
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Inter var experimental", "Inter var", -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
+}
+body {
+  background-color:azure;
+}
+main {
+  padding: 1.5rem;
+}
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h2 {
+  margin-bottom: 1rem;
+  color:grey;
+  font-weight: 400;
+}
+.current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: white;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px aqua;
+  border: 5px solid aquamarine;
+  margin: 0 auto 2rem;
+}
+</style>
 
