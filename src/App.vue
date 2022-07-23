@@ -14,7 +14,7 @@ const currentWeight = computed(() => {
 
 const addWeight = () => {
   weights.value.push({
-    weight: weightInput.value,
+    weight: weightInput.value.toFixed(1),
     date: new Date().getTime(),
   })
 }
