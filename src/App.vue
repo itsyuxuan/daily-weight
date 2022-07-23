@@ -48,8 +48,8 @@ watch(
               {
                 label: 'Weight',
                 data: ws.sort((a, b) => a.date - b.date).map(w => w.weight),
-                backgroundColor: 'rgba(255, 105, 180, 0.2)',
-                borderColor: 'rgb(255, 105, 180)',
+                backgroundColor: 'rgba(131, 175, 112, 0.2)',
+                borderColor: 'rgb(186, 208, 175)',
                 borderWidth: 1,
                 fill: true,
               },
@@ -155,7 +155,7 @@ form {
 }
 form:focus-within,
 form:hover {
-  border-color: hotpink;
+  border-color: lightseagreen;
   border-width: 2px;
 }
 form input[type="number"] {
@@ -172,7 +172,7 @@ form input[type="submit"] {
   outline: none;
   border: none;
   cursor: pointer;
-  background-color: hotpink;
+  background-color: lightseagreen;
   padding: 0.5rem 1rem;
   color: white;
   font-size: 1.25rem;
@@ -182,8 +182,8 @@ form input[type="submit"] {
 }
 form input[type="submit"]:hover {
   background-color: white;
-  color: hotpink;
-  border-left-color: hotpink;
+  color: lightseagreen;
+  border-left-color: lightseagreen;
 }
 .canvas-box{
   width: 100%;
@@ -205,6 +205,25 @@ form input[type="submit"]:hover {
   align-items: center;
   padding: 0.5rem;
   cursor: pointer;
+}
+.weight-history ul li:nth-child(even) {
+  background-color: #f1f1f1;
+}
+.weight-history ul li:hover {
+  background-color: #bad0af;
+}
+.weight-history ul li:last-of-type {
+  border-bottom: none;
+}
+.weight-history ul li span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+.weight-history ul li small {
+  color: grey;
+  font-style: italic;
 }
 </style>
 
