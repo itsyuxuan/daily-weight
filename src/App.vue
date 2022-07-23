@@ -37,29 +37,28 @@ watch(
     }
 
     nextTick(() => {
-      weightChart.value = new Chart(
-        weightChartEl.value.getContext('2d'), {
-          type: 'line',
-          data: {
-            labels: ws
-              .sort((a, b) => a.date - b.date)
-              .map(w => new Date(w.date).toLocaleDateString()),
-            datasets: [
-              {
-                label: 'Weight',
-                data: ws.sort((a, b) => a.date - b.date).map(w => w.weight),
-                backgroundColor: 'rgba(131, 175, 112, 0.2)',
-                borderColor: 'rgb(186, 208, 175)',
-                borderWidth: 1,
-                fill: true,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-          },
-        })
+      weightChart.value = new Chart(weightChartEl.value.getContext('2d'), {
+        type: 'line',
+        data: {
+          labels: ws
+            .sort((a, b) => a.date - b.date)
+            .map(w => new Date(w.date).toLocaleDateString()),
+          datasets: [
+            {
+              label: 'Weight',
+              data: ws.sort((a, b) => a.date - b.date).map(w => w.weight),
+              backgroundColor: 'rgba(131, 175, 112, 0.2)',
+              borderColor: 'rgb(186, 208, 175)',
+              borderWidth: 1,
+              fill: true,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+        },
+      })
     })
   },
   { deep: true },
@@ -99,14 +98,16 @@ watch(
 </template>
 
 <style scoped>
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:"Inter var experimental", "Inter var", -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
+  font-family: "Inter var experimental", "Inter var", -apple-system, "system-ui",
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
 body {
-  background-color:azure;
+  background-color: azure;
 }
 main {
   padding: 1.5rem;
@@ -118,7 +119,7 @@ h1 {
 }
 h2 {
   margin-bottom: 1rem;
-  color:grey;
+  color: grey;
   font-weight: 400;
 }
 .current {
@@ -162,7 +163,7 @@ form input[type="number"] {
   appearance: none;
   outline: none;
   border: none;
-  background-color:white;
+  background-color: white;
   flex: 1;
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
@@ -185,7 +186,7 @@ form input[type="submit"]:hover {
   color: lightseagreen;
   border-left-color: lightseagreen;
 }
-.canvas-box{
+.canvas-box {
   width: 100%;
   max-width: 720px;
   background-color: white;
@@ -195,7 +196,7 @@ form input[type="submit"]:hover {
   margin-bottom: 2rem;
 }
 .weight-history ul {
-  list-style:none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -226,4 +227,3 @@ form input[type="submit"]:hover {
   font-style: italic;
 }
 </style>
-
