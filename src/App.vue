@@ -135,5 +135,15 @@ h2 {
   border: 5px solid aquamarine;
   margin: 0 auto 2rem;
 }
+.current span {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.current small {
+  color: grey;
+  font-style: italic;
+}
 </style>
 
