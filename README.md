@@ -1,6 +1,6 @@
 # Daily Weight
 
-This app should help track your daily weight and provide data visualization of data in a week.
+This app helps track your daily weight and visualize data within a week.
 
 ## Things to do next
 
